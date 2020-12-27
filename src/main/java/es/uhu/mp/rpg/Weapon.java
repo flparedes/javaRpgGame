@@ -15,11 +15,13 @@ public class Weapon {
                 this.type = type;
                 break;
             default:
-                System.out.println("Tipo incorrecto");
+                System.err.println("Tipo incorrecto");
         }
         this.name = name;
         this.damage = damage;
     }
+
+    public String getName() { return name; }
 
     public char getType() {
         return type;
