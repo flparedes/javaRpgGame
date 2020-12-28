@@ -4,8 +4,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
-// POJO = Plain Old Java Object
-
 public class Character implements ICharacter {
     protected static Map<Integer, Integer> LEVELS = new HashMap<Integer, Integer>();
     static {
