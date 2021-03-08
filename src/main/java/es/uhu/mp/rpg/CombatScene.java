@@ -17,7 +17,7 @@ public class CombatScene extends BaseScene {
             for (int i = 0; i < enemies.size(); i++) {
                 System.out.println((i + 1) + " - " + enemies.get(i).getName());
             }
-            
+
             enemySelected = inputScaner.nextInt();
             enemySelected--;
         } while (enemySelected < 0 || enemySelected >= enemies.size());
