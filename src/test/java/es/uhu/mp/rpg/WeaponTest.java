@@ -2,6 +2,7 @@ package es.uhu.mp.rpg;
 
 import static org.junit.Assert.assertEquals;
 
+import es.uhu.mp.rpg.character.Weapon;
 import org.junit.Test;
 
 public class WeaponTest extends BaseTest {

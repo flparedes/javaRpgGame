@@ -1,10 +1,19 @@
-package es.uhu.mp.rpg;
+package es.uhu.mp.rpg.scene;
+
+import es.uhu.mp.rpg.character.Character;
+import es.uhu.mp.rpg.character.ICharacter;
 
 import java.util.List;
 import java.util.ArrayList;
 
 public class CombatScene extends BaseScene {
     private List<Character> enemies = new ArrayList<Character>();
+    private String winSceneCode;
+    private String loseSceneCode;
+
+    public CombatScene(String code, String name, String text) {
+        super(code, name, text);
+    }
 
     public void addEnemy(Character enemy) {
         enemies.add(enemy);
@@ -26,7 +35,7 @@ public class CombatScene extends BaseScene {
     }
 
     @Override
-    public void play(Character player) {
+    public String play(ICharacter player) {
         boolean inCombat = true;
         int deadEnemies;
 
@@ -56,5 +65,23 @@ public class CombatScene extends BaseScene {
             // 5.- Comprobar si el combate sigue
             inCombat = deadEnemies < enemies.size() && !player.isDead();
         } while (inCombat);
+
+        return player.isDead() ? loseSceneCode : winSceneCode;
+    }
+
+    public String getWinSceneCode() {
+        return winSceneCode;
+    }
+
+    public void setWinSceneCode(String winSceneCode) {
+        this.winSceneCode = winSceneCode;
+    }
+
+    public String getLoseSceneCode() {
+        return loseSceneCode;
+    }
+
+    public void setLoseSceneCode(String loseSceneCode) {
+        this.loseSceneCode = loseSceneCode;
     }
 }
