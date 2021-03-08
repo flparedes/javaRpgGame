@@ -1,4 +1,4 @@
-package es.uhu.mp.rpg;
+package es.uhu.mp.rpg.character;
 
 import java.util.HashMap;
 import java.util.Map;

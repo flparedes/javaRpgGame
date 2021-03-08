@@ -1,4 +1,4 @@
-package es.uhu.mp.rpg;
+package es.uhu.mp.rpg.character;
 
 public class Weapon {
     public static final char TYPE_DEX = 'D';
